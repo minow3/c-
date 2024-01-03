@@ -4,13 +4,9 @@
     {
         // Console UX
         Console.Title = "MoneyBag insurance Group LTD";
-        Console.BackgroundColor = ConsoleColor.White;
-        Console.WindowWidth = 60;
 
         // Agent Information
         string? agent = "Risky Riches"; // Agent name
-        int agentPass = 1234;   // Agent password
-
 
         // Repeat insurance quote
         bool newQuote = true;
@@ -24,41 +20,63 @@
         string? userSurname;
         int userAge;
 
-        // Actions
-        //bool agentCheck = false;
-        //int agentProvidedPass;
-
         // Main Program
-        WelcomeMessage();
-        PasswordManager(agentPass);
+        EntranceMessage();
+        PasswordManager();
+        Console.Clear();
+        AdminInterface(agent);
 
 
     }
 
-    static void WelcomeMessage()
+    static void Clock() // Current time
     {
-        Console.WriteLine("\n\t\tMoneyBag Insurance Group LTD");
-        Console.WriteLine("\n\tPlease enter authentication code\n");
+        DateTime currentDateTime = DateTime.Now;
+        string formattedDateTime = currentDateTime.ToString("dddd, dd MMMM yyyy HH:mm:ss");
+        Console.WriteLine("Current date and time: " + formattedDateTime);
+    }
+
+    static void EntranceMessage() //
+    {
+        Console.Clear();
+        Clock();
+        Console.WriteLine("\n\n\tMoneyBag Insurance Group LTD");
+        Console.WriteLine("\n\n\tPlease enter authentication code");
 
     }
 
-    static bool PasswordManager(int agentPass)
+    static void AdminInterface(string agent)
+    {
+        Clock();
+        Console.WriteLine("\n\n\tMoneyBag Insurance Group LTD");
+        Console.WriteLine("\n\t\t\t\tAgent: " + agent);
+
+    }
+
+    static void PasswordManager()
     {   
         while (true)
         {
-            bool agentCheck;
+            int agentPass = 1234;   // Agent password
             int agentProvidedPass = Convert.ToInt32(Console.ReadLine());
 
             if (agentProvidedPass == agentPass)
             {
-                agentCheck = true;
-                return agentCheck;
+                break;
             }
-            else
+            else if(agentProvidedPass != agentPass)
             {
+                Console.Clear();
+                Clock();
+                Console.WriteLine("\n\n\tMoneyBag Insurance Group LTD");
+                Console.WriteLine("\n\tInvalid code");
                 Console.WriteLine("\n\tProvide correct authentication code");
             }
+            
         }
         
     }
+
+
+
 }
