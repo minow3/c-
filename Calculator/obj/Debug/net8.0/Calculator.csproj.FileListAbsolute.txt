@@ -12,3 +12,4 @@ C:\Users\minow\Desktop\c#\Calculator\obj\Debug\net8.0\refint\Calculator.dll
 C:\Users\minow\Desktop\c#\Calculator\obj\Debug\net8.0\Calculator.pdb
 C:\Users\minow\Desktop\c#\Calculator\obj\Debug\net8.0\Calculator.genruntimeconfig.cache
 C:\Users\minow\Desktop\c#\Calculator\obj\Debug\net8.0\ref\Calculator.dll
+C:\Users\minow\Desktop\c#\calculator\obj\Debug\net8.0\Calculator.sourcelink.json
