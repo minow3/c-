@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using System.Security.Cryptography.X509Certificates;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -18,7 +20,6 @@
         // User information
         string? userName;
         string? userSurname;
-        int userAge;
 
         //Juozas
         Console.WriteLine("Your gender");//juozas
@@ -26,7 +27,7 @@
         int gender = GetGender();//juozas
         int baseQuote = CalculateBaseQuote(gender);//juozas
 
-        Console.WriteLine(" suma " + baseQuote);//juozas
+        //Console.WriteLine(" suma " + baseQuote);//juozas
 
 
         // Main Program
@@ -35,6 +36,8 @@
         Console.Clear();
         AdminInterface(agent);
 
+        int userAge = GetUserAge();
+        int ageQuote = AgentAge(userAge);
 
     }
 
@@ -107,26 +110,43 @@
         }    
     }
 
-    static void AgentAge(int userAge)
+    static int GetUserAge()
+    {
+        Console.WriteLine("Please enter your age: ");
+        return Convert.ToInt32(Console.ReadLine());
+    }
+    static int AgentAge(int userAge)
     //sarune
     {
+        int nextQuote = CalculateBaseQuote(gender);
         if (userAge < 35) {
             Console.Write("20% extra under 35");
+            return nextQuote + (nextQuote / 100 * 20);
+
         }
-        else if (userAge > 35 &&  userAge < 55)
+        else if (userAge >= 35 &&  userAge < 55)
         {
             Console.Write("40% extra from 35 to 55 inclusive");
+
+            return nextQuote + (nextQuote / 100 * 40);
         }
-            else if (userAge > 56 && userAge < 70) 
+            else if (userAge >= 56 && userAge <= 70) 
         {
             Console.Write("65% etra from 56 to 70");
+
+            return nextQuote + (nextQuote / 100 * 65);
         }
             else if (userAge > 70) {
             Console.Write("No quote provided for over 70");
+
+            return 0;
         }
+
             else 
         {
             Console.Write("incorrect age");
+            
+            return 1;
         }
     }
 
