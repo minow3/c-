@@ -112,17 +112,14 @@
     {
         if (userAge < 35) {
             Console.Write("20% extra under 35");
-            count += 20;
         }
         else if (userAge > 35 &&  userAge < 55)
         {
             Console.Write("40% extra from 35 to 55 inclusive");
-            count += 40;
         }
             else if (userAge > 56 && userAge < 70) 
         {
             Console.Write("65% etra from 56 to 70");
-            count += 65;
         }
             else if (userAge > 70) {
             Console.Write("No quote provided for over 70");
