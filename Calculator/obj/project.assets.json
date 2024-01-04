@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\minow\\.nuget\\packages\\": {}
+    "C:\\Users\\sharo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\minow\\Desktop\\c#\\Calculator\\Calculator.csproj",
+      "projectUniqueName": "C:\\Users\\sharo\\Desktop\\github\\moneybag\\Calculator\\Calculator.csproj",
       "projectName": "Calculator",
-      "projectPath": "C:\\Users\\minow\\Desktop\\c#\\Calculator\\Calculator.csproj",
-      "packagesPath": "C:\\Users\\minow\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\minow\\Desktop\\c#\\Calculator\\obj\\",
+      "projectPath": "C:\\Users\\sharo\\Desktop\\github\\moneybag\\Calculator\\Calculator.csproj",
+      "packagesPath": "C:\\Users\\sharo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sharo\\Desktop\\github\\moneybag\\Calculator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\minow\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\sharo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
