@@ -101,31 +101,6 @@
         {
             Console.Write("incorrect age");
         }
-
-        if (userAge < 35 == count) {
-            if (userAge == count) {
-                Console.Write("20% added");
-            }
-            else if (userAge > 35 && userAge < 55)
-                if (userAge == count) {
-                    Console.Write("40% extra");
-            }
-            else if (userAge > 56 && userAge < 70)
-                if (userAge == count) {
-                    Console.Write("65% extra");
-                    break;
-            }
-            Console.Write("Do you want to play again (y/n)");
-            tryAgain = Console.ReadLine();
-            if (tryAgain == "y")
-            {
-                int newQuote;
-            }
-            else if (tryAgain == "n")
-            {
-                gamePlay = false;
-            }
-        }
     }
 
 
