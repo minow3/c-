@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qGfF32eNOnfW2/6lA43Mc0dE0Zu+0neMeDZIYvl28dpiVJ6Sbrz4qt3TUACqRmjE9DAqKW2yeKHxBs2/9K3ipw==",
+  "dgSpecHash": "YmBFSeiDzI2QN4EtZLk9Wc4ix335eaGTLVW4+5W+T84PN1q0co4bVnLNQQv8MxxMInH/87AdS1OtDhhUc3jd0g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sharo\\Desktop\\github\\moneybag\\Calculator\\Calculator.csproj",
+  "projectFilePath": "/home/juozas/Desktop/github/moneybag-2/Calculator/Calculator.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

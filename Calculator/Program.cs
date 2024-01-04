@@ -20,6 +20,15 @@
         string? userSurname;
         int userAge;
 
+        //Juozas
+        Console.WriteLine("Your gender");//juozas
+
+        int gender = GetGender();//juozas
+        int baseQuote = CalculateBaseQuote(gender);//juozas
+
+        Console.WriteLine(" suma " + baseQuote);//juozas
+
+
         // Main Program
         EntranceMessage();
         PasswordManager();
@@ -75,6 +84,27 @@
             
         }
         
+    }
+
+     static int GetGender()
+    //juozas
+    {
+        Console.WriteLine("Please enter your gender (male=1/female=2):");
+        return Convert.ToInt32(Console.ReadLine());
+    }
+
+    static int CalculateBaseQuote(int gender)
+    //juozas
+    {
+        if (gender == 1)
+            return 2 * 250; 
+        else if (gender == 2)
+            return (int)(0.7 * 250); 
+        else
+        {
+            Console.WriteLine("Invalid gender. Please enter either 'male' or 'female'.");
+            return 0;
+        }    
     }
 
     static void AgentAge(int userAge)

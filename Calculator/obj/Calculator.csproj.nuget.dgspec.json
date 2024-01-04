@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sharo\\Desktop\\github\\moneybag\\Calculator\\Calculator.csproj": {}
+    "/home/juozas/Desktop/github/moneybag-2/Calculator/Calculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sharo\\Desktop\\github\\moneybag\\Calculator\\Calculator.csproj": {
+    "/home/juozas/Desktop/github/moneybag-2/Calculator/Calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sharo\\Desktop\\github\\moneybag\\Calculator\\Calculator.csproj",
+        "projectUniqueName": "/home/juozas/Desktop/github/moneybag-2/Calculator/Calculator.csproj",
         "projectName": "Calculator",
-        "projectPath": "C:\\Users\\sharo\\Desktop\\github\\moneybag\\Calculator\\Calculator.csproj",
-        "packagesPath": "C:\\Users\\sharo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sharo\\Desktop\\github\\moneybag\\Calculator\\obj\\",
+        "projectPath": "/home/juozas/Desktop/github/moneybag-2/Calculator/Calculator.csproj",
+        "packagesPath": "/home/juozas/.nuget/packages/",
+        "outputPath": "/home/juozas/Desktop/github/moneybag-2/Calculator/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sharo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/juozas/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
