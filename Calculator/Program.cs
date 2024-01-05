@@ -101,7 +101,7 @@ internal class Program
         else
         {
             Console.WriteLine("Sorry, no quote for individuals over 70.");
-            Environment.Exit(0);
+            //Environment.Exit(0);
             return 0; // This line is never reached, but needed for the compiler
         }
     }
