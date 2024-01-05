@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\minow\\Desktop\\c#\\calculator\\Calculator.csproj": {}
+    "/home/juozas/Desktop/moneybag/Calculator/Calculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\minow\\Desktop\\c#\\calculator\\Calculator.csproj": {
+    "/home/juozas/Desktop/moneybag/Calculator/Calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\minow\\Desktop\\c#\\calculator\\Calculator.csproj",
+        "projectUniqueName": "/home/juozas/Desktop/moneybag/Calculator/Calculator.csproj",
         "projectName": "Calculator",
-        "projectPath": "C:\\Users\\minow\\Desktop\\c#\\calculator\\Calculator.csproj",
-        "packagesPath": "C:\\Users\\minow\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\minow\\Desktop\\c#\\calculator\\obj\\",
+        "projectPath": "/home/juozas/Desktop/moneybag/Calculator/Calculator.csproj",
+        "packagesPath": "/home/juozas/.nuget/packages/",
+        "outputPath": "/home/juozas/Desktop/moneybag/Calculator/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\minow\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/juozas/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

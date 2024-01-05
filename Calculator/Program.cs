@@ -107,6 +107,7 @@ internal class Program
     }
 
      static double GetHealthConditionMultiplier()
+     // Juozas Sadauskas
     {
         Console.WriteLine("Do you have existing health conditions? (y/n)");
         bool hasHealthCondition = Console.ReadLine().ToLower() == "y";
@@ -114,6 +115,7 @@ internal class Program
     }
 
     static double GetSmokingMultiplier()
+    // Juozas sadauskas
     {
         Console.WriteLine("Do you smoke? (y/n)");
         bool isSmoker = Console.ReadLine().ToLower() == "y";
