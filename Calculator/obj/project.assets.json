@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/home/juozas/.nuget/packages/": {}
+    "C:\\Users\\minow\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/juozas/Desktop/github/moneybag-2/Calculator/Calculator.csproj",
+      "projectUniqueName": "C:\\Users\\minow\\Desktop\\c#\\calculator\\Calculator.csproj",
       "projectName": "Calculator",
-      "projectPath": "/home/juozas/Desktop/github/moneybag-2/Calculator/Calculator.csproj",
-      "packagesPath": "/home/juozas/.nuget/packages/",
-      "outputPath": "/home/juozas/Desktop/github/moneybag-2/Calculator/obj/",
+      "projectPath": "C:\\Users\\minow\\Desktop\\c#\\calculator\\Calculator.csproj",
+      "packagesPath": "C:\\Users\\minow\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\minow\\Desktop\\c#\\calculator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/juozas/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\minow\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -125,7 +125,3 @@ internal class Program
         return baseQuote * genderMultiplier * ageMultiplier * healthConditionMultiplier * smokingMultiplier;
     }
 }
-
-
-
-}
