@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6mpdhI7KqV5T0GIQqiL1PFZuoMp8+kKPNEq+NkzqiKgHl5hluJUvSDWgLSDqugAkwJ9vOHxYMdH2xrfKxJXgow==",
+  "dgSpecHash": "YmBFSeiDzI2QN4EtZLk9Wc4ix335eaGTLVW4+5W+T84PN1q0co4bVnLNQQv8MxxMInH/87AdS1OtDhhUc3jd0g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\minow\\Desktop\\c#\\calculator\\Calculator.csproj",
+  "projectFilePath": "/home/juozas/Desktop/github/moneybag-2/Calculator/Calculator.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
