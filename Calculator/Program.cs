@@ -20,8 +20,8 @@ internal class Program
             double baseQuote = 250.0;
 
             // Get user's name and surname
-            string userName = GetUserName();
-            string userSurname = GetUserSurname();
+            string? userName = GetUserName();
+            string? userSurname = GetUserSurname();
 
             double genderMultiplier = GetGenderMultiplier();
             int age = GetAge();
@@ -50,13 +50,13 @@ internal class Program
         Console.WriteLine("Current date and time: " + formattedDateTime);
     }
 
-    static string GetUserName()
+    static string? GetUserName()
     {
         Console.WriteLine("Enter your name:");
         return Console.ReadLine();
     }
 
-    static string GetUserSurname()
+    static string? GetUserSurname()
     {
         Console.WriteLine("Enter your surname:");
         return Console.ReadLine();
@@ -72,7 +72,7 @@ internal class Program
     // Juozas Sadauskas
     {
         Console.WriteLine("Select gender: (1) Male, (2) Female");
-        int genderChoice = int.Parse(Console.ReadLine());
+        int genderChoice = Convert.ToInt32(Console.ReadLine());
         return (genderChoice == 1) ? 2.0 : 0.7;
     }
 
@@ -80,7 +80,7 @@ internal class Program
     //Sarune Matiukaite
     {
         Console.WriteLine("Enter age:");
-        return int.Parse(Console.ReadLine());
+        return Convert.ToInt32(Console.ReadLine());
     }
 
     static double GetAgeMultiplier(int age)
@@ -119,7 +119,7 @@ internal class Program
     {
         Console.WriteLine("Do you smoke? (y/n)");
         bool isSmoker = Console.ReadLine().ToLower() == "y";
-        return isSmoker ? 1.2 : -1.0;
+        return isSmoker ? 1.2 : -100;
     }
 
     static double CalculateQuote(double baseQuote, double genderMultiplier, double ageMultiplier, double healthConditionMultiplier, double smokingMultiplier)

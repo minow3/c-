@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/juozas/Desktop/moneybag/Calculator/Calculator.csproj": {}
+    "/home/minow3/Desktop/github/moneybag/Calculator/Calculator.csproj": {}
   },
   "projects": {
-    "/home/juozas/Desktop/moneybag/Calculator/Calculator.csproj": {
+    "/home/minow3/Desktop/github/moneybag/Calculator/Calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/juozas/Desktop/moneybag/Calculator/Calculator.csproj",
+        "projectUniqueName": "/home/minow3/Desktop/github/moneybag/Calculator/Calculator.csproj",
         "projectName": "Calculator",
-        "projectPath": "/home/juozas/Desktop/moneybag/Calculator/Calculator.csproj",
-        "packagesPath": "/home/juozas/.nuget/packages/",
-        "outputPath": "/home/juozas/Desktop/moneybag/Calculator/obj/",
+        "projectPath": "/home/minow3/Desktop/github/moneybag/Calculator/Calculator.csproj",
+        "packagesPath": "/home/minow3/.nuget/packages/",
+        "outputPath": "/home/minow3/Desktop/github/moneybag/Calculator/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/juozas/.nuget/NuGet/NuGet.Config"
+          "/home/minow3/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
