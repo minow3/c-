@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System.Net;
+using System.Security.Cryptography.X509Certificates;
 
 internal class Program
 {
@@ -26,6 +27,7 @@ internal class Program
             double genderMultiplier = GetGenderMultiplier();
             int age = GetAge();
             double ageMultiplier = GetAgeMultiplier(age);
+
             double healthConditionMultiplier = GetHealthConditionMultiplier();
             double smokingMultiplier = GetSmokingMultiplier();
 
@@ -102,6 +104,17 @@ internal class Program
         {
             Console.WriteLine("Sorry, no quote for individuals over 70.");
             //Environment.Exit(0);
+            Console.WriteLine("Do you want to get another quote? (y/n)");
+            string? repeat = Console.ReadLine().ToLower();
+            if (repeat == "y")
+            {
+                Main.Restart();
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
+
             return 0; // This line is never reached, but needed for the compiler
         }
     }
