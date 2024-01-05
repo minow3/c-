@@ -119,11 +119,11 @@ internal class Program
     {
         Console.WriteLine("Do you smoke? (y/n)");
         bool isSmoker = Console.ReadLine().ToLower() == "y";
-        return isSmoker ? 1.2 : -100;
+        return isSmoker ? 75 : -100;
     }
 
     static double CalculateQuote(double baseQuote, double genderMultiplier, double ageMultiplier, double healthConditionMultiplier, double smokingMultiplier)
     {
-        return baseQuote * genderMultiplier * ageMultiplier * healthConditionMultiplier * smokingMultiplier;
+        return baseQuote * genderMultiplier * ageMultiplier * healthConditionMultiplier + smokingMultiplier;
     }
 }
