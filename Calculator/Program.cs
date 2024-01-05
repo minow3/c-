@@ -12,35 +12,16 @@ internal class Program
 
         // Repeat insurance quote
         bool newQuote = true;
-        int menuChose;
-        int tryAgain;
-
-        // Standard Rates ( Can be adjusted here )
-        int generalBase = 250; // Starting general base value
-
-        // User information
-        string? userName;
-        string? userSurname;
-
-        //Juozas
-        Console.WriteLine("Your gender");//juozas
-
-        int gender = GetGender();//juozas
-        int baseQuote = CalculateBaseQuote(gender);//juozas
-
-        //Console.WriteLine(" suma " + baseQuote);//juozas
-
-
         // Main Program
-        EntranceMessage();
-        PasswordManager();
-        
-
         while (newQuote)
         {
-            Console.WriteLine("Insurance Quote Calculator");
+            Console.WriteLine("MoneyBag insurance Group LTD");
 
             double baseQuote = 250.0;
+
+            // Get user's name and surname
+            string userName = GetUserName();
+            string userSurname = GetUserSurname();
 
             double genderMultiplier = GetGenderMultiplier();
             int age = GetAge();
@@ -50,7 +31,8 @@ internal class Program
 
             double finalQuote = CalculateQuote(baseQuote, genderMultiplier, ageMultiplier, healthConditionMultiplier, smokingMultiplier);
 
-            Console.WriteLine($"Your insurance quote is: {finalQuote} euros");
+            // Print personalized message
+            PrintPersonalizedMessage(userName, userSurname, finalQuote);
 
             Console.WriteLine("Do you want to get another quote? (y/n)");
             newQuote = Console.ReadLine().ToLower() == "y";
@@ -58,9 +40,6 @@ internal class Program
             
         }
         
-
-        int userAge = GetUserAge();
-        int ageQuote = AgentAge(userAge);
 
     }
 
@@ -71,111 +50,82 @@ internal class Program
         Console.WriteLine("Current date and time: " + formattedDateTime);
     }
 
-    static void EntranceMessage() //
+    static string GetUserName()
     {
-        Console.Clear();
-        Clock();
-        Console.WriteLine("\n\n\tMoneyBag Insurance Group LTD");
-        Console.WriteLine("\n\n\tPlease enter authentication code");
-
+        Console.WriteLine("Enter your name:");
+        return Console.ReadLine();
     }
 
-    static void AdminInterface(string agent)
+    static string GetUserSurname()
     {
-        Clock();
-        Console.WriteLine("\n\n\tMoneyBag Insurance Group LTD");
-        Console.WriteLine("\n\t\t\t\tAgent: " + agent);
-        Console.WriteLine("\n\n\tMenu options");
-        Console.WriteLine("\n\t1 - New quote");
-        Console.WriteLine("\n\t2 - General information");
-        Console.WriteLine("\n\t0 - EXIT");
-
+        Console.WriteLine("Enter your surname:");
+        return Console.ReadLine();
     }
 
-    static void PasswordManager()
-    {   
-        while (true)
+    static void PrintPersonalizedMessage(string userName, string userSurname, double finalQuote)
+    {
+        Console.WriteLine($"Dear {userName} {userSurname},");
+        Console.WriteLine($"Your insurance quote is: {finalQuote} euros");
+    }
+
+    static double GetGenderMultiplier()
+    // Juozas Sadauskas
+    {
+        Console.WriteLine("Select gender: (1) Male, (2) Female");
+        int genderChoice = int.Parse(Console.ReadLine());
+        return (genderChoice == 1) ? 2.0 : 0.7;
+    }
+
+    static int GetAge()
+    //Sarune Matiukaite
+    {
+        Console.WriteLine("Enter age:");
+        return int.Parse(Console.ReadLine());
+    }
+
+    static double GetAgeMultiplier(int age)
+    //Sarune Matiukaite
+    {
+        if (age < 35)
         {
-            int agentPass = 1234;   // Agent password
-            int agentProvidedPass = Convert.ToInt32(Console.ReadLine());
-
-            if (agentProvidedPass == agentPass)
-            {
-                continue;
-            }
-            else //(agentProvidedPass != agentPass)
-            {
-                Console.Clear();
-                Clock();
-                Console.WriteLine("\n\n\tMoneyBag Insurance Group LTD");
-                Console.WriteLine("\n\tInvalid code");
-                Console.WriteLine("\n\tProvide correct authentication code");
-            }
-            
+            return 1.2;
         }
-        
-    }
-
-     static int GetGender()
-    //juozas
-    {
-        Console.WriteLine("Please enter your gender (male=1/female=2):");
-        return Convert.ToInt32(Console.ReadLine());
-    }
-
-    static int CalculateBaseQuote(int gender)
-    //juozas
-    {
-        if (gender == 1)
-            return 2 * 250; 
-        else if (gender == 2)
-            return (int)(0.7 * 250); 
+        else if (age >= 35 && age <= 55)
+        {
+            return 1.4;
+        }
+        else if (age >= 56 && age <= 70)
+        {
+            return 1.65;
+        }
         else
         {
-            Console.WriteLine("Invalid gender. Please enter either 'male' or 'female'.");
-            return 0;
-        }    
+            Console.WriteLine("Sorry, no quote for individuals over 70.");
+            Environment.Exit(0);
+            return 0; // This line is never reached, but needed for the compiler
+        }
     }
 
-    static int GetUserAge()
+     static double GetHealthConditionMultiplier()
     {
-        Console.WriteLine("Please enter your age: ");
-        return Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Do you have existing health conditions? (y/n)");
+        bool hasHealthCondition = Console.ReadLine().ToLower() == "y";
+        return hasHealthCondition ? 1.5 : 1.0;
     }
-    static int AgentAge(int userAge)
-    //sarune
+
+    static double GetSmokingMultiplier()
     {
-        int nextQuote = CalculateBaseQuote(gender);
-        if (userAge < 35) {
-            Console.Write("20% extra under 35");
-            return nextQuote + (nextQuote / 100 * 20);
-
-        }
-        else if (userAge >= 35 &&  userAge < 55)
-        {
-            Console.Write("40% extra from 35 to 55 inclusive");
-
-            return nextQuote + (nextQuote / 100 * 40);
-        }
-            else if (userAge >= 56 && userAge <= 70) 
-        {
-            Console.Write("65% etra from 56 to 70");
-
-            return nextQuote + (nextQuote / 100 * 65);
-        }
-            else if (userAge > 70) {
-            Console.Write("No quote provided for over 70");
-
-            return 0;
-        }
-
-            else 
-        {
-            Console.Write("incorrect age");
-            
-            return 1;
-        }
+        Console.WriteLine("Do you smoke? (y/n)");
+        bool isSmoker = Console.ReadLine().ToLower() == "y";
+        return isSmoker ? 1.2 : -1.0;
     }
+
+    static double CalculateQuote(double baseQuote, double genderMultiplier, double ageMultiplier, double healthConditionMultiplier, double smokingMultiplier)
+    {
+        return baseQuote * genderMultiplier * ageMultiplier * healthConditionMultiplier * smokingMultiplier;
+    }
+}
+
 
 
 }
