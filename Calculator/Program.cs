@@ -10,6 +10,7 @@
 
         // Repeat insurance quote
         bool newQuote = true;
+        int menuChose;
         int tryAgain;
 
         // Standard Rates ( Can be adjusted here )
@@ -23,8 +24,30 @@
         // Main Program
         EntranceMessage();
         PasswordManager();
-        Console.Clear();
-        AdminInterface(agent);
+        
+
+        while (newQuote)
+        {
+            Console.WriteLine("Insurance Quote Calculator");
+
+            double baseQuote = 250.0;
+
+            double genderMultiplier = GetGenderMultiplier();
+            int age = GetAge();
+            double ageMultiplier = GetAgeMultiplier(age);
+            double healthConditionMultiplier = GetHealthConditionMultiplier();
+            double smokingMultiplier = GetSmokingMultiplier();
+
+            double finalQuote = CalculateQuote(baseQuote, genderMultiplier, ageMultiplier, healthConditionMultiplier, smokingMultiplier);
+
+            Console.WriteLine($"Your insurance quote is: {finalQuote} euros");
+
+            Console.WriteLine("Do you want to get another quote? (y/n)");
+            newQuote = Console.ReadLine().ToLower() == "y";
+
+            
+        }
+        
 
 
     }
@@ -50,6 +73,10 @@
         Clock();
         Console.WriteLine("\n\n\tMoneyBag Insurance Group LTD");
         Console.WriteLine("\n\t\t\t\tAgent: " + agent);
+        Console.WriteLine("\n\n\tMenu options");
+        Console.WriteLine("\n\t1 - New quote");
+        Console.WriteLine("\n\t2 - General information");
+        Console.WriteLine("\n\t0 - EXIT");
 
     }
 
@@ -62,9 +89,9 @@
 
             if (agentProvidedPass == agentPass)
             {
-                break;
+                continue;
             }
-            else if(agentProvidedPass != agentPass)
+            else //(agentProvidedPass != agentPass)
             {
                 Console.Clear();
                 Clock();
