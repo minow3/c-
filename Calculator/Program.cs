@@ -4,12 +4,11 @@ using System.Security.Cryptography.X509Certificates;
 internal class Program
 {
     private static void Main(string[] args)
-    {
+    {   
+        #pragma warning disable CS8602
+        #pragma warning disable CS8603
         // Console UX
         Console.Title = "MoneyBag insurance Group LTD";
-
-        // Agent Information
-        string? agent = "Risky Riches"; // Agent name
 
         // Repeat insurance quote
         bool newQuote = true;
@@ -52,13 +51,13 @@ internal class Program
         Console.WriteLine("Current date and time: " + formattedDateTime);
     }
 
-    static string? GetUserName()
+    static string GetUserName()
     {
         Console.WriteLine("Enter your name:");
         return Console.ReadLine();
     }
 
-    static string? GetUserSurname()
+    static string GetUserSurname()
     {
         Console.WriteLine("Enter your surname:");
         return Console.ReadLine();
@@ -103,17 +102,9 @@ internal class Program
         else
         {
             Console.WriteLine("Sorry, no quote for individuals over 70.");
-            //Environment.Exit(0);
-            Console.WriteLine("Do you want to get another quote? (y/n)");
-            string? repeat = Console.ReadLine().ToLower();
-            if (repeat == "y")
-            {
-                Main.Restart();
-            }
-            else
-            {
-                Environment.Exit(0);
-            }
+            //Closing program
+            Environment.Exit(0);
+            
 
             return 0; // This line is never reached, but needed for the compiler
         }
