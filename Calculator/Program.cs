@@ -4,19 +4,49 @@ using System.Security.Cryptography.X509Certificates;
 internal class Program
 {
     private static void Main(string[] args)
-    {   
+    //Tomas Bendaravicius
+    {
         #pragma warning disable CS8602
         #pragma warning disable CS8603
-        // Console UX
-        Console.Title = "MoneyBag insurance Group LTD";
+        Console.Title = "MoneyBag Insurance Group LTD";
+        Console.BackgroundColor = ConsoleColor.White;
+        Console.ForegroundColor = ConsoleColor.Blue;
+
+        string? agent1 = "Risky Rich";
+        string? agent1Pass = "1234";
+        string? enterPass;
+
+        Console.Clear();
+        Loading();
+
+        Console.Clear();
+        System.Threading.Thread.Sleep(1000);
+        StartingMenu();
+        while (true)
+        {
+            Console.WriteLine("\n\tProvide insurance agent password:");
+            enterPass = Console.ReadLine();
+            if (enterPass == agent1Pass){
+                break;
+            }
+            else
+            {
+                Console.WriteLine("\n\tInvalid password !!!");
+                Console.WriteLine("\n\tPlease try again:");
+
+            }
+        }
+
+        Console.Clear();
+        StartingMenu();
+        Console.WriteLine($"\n\tWelcome {agent1}\n");
+
 
         // Repeat insurance quote
         bool newQuote = true;
         // Main Program
         while (newQuote)
         {
-            Console.WriteLine("MoneyBag insurance Group LTD");
-
             double baseQuote = 250.0;
 
             // Get user's name and surname
@@ -44,26 +74,55 @@ internal class Program
 
     }
 
+    static void Loading()
+    //Tomas Bendaravicius
+    {
+        Console.Clear();
+        Console.WriteLine("\n\n\n\tWelcome");
+        System.Threading.Thread.Sleep(2000);
+        Console.Clear();
+        Console.WriteLine("\n\n\n\tInitiating...");
+        System.Threading.Thread.Sleep(2000);
+        Console.Clear();
+        Console.WriteLine("\n\n\n\tLoading network...");
+        System.Threading.Thread.Sleep(2000);
+        Console.Clear();
+        Console.WriteLine("\n\n\n\tDownloading data...");
+        System.Threading.Thread.Sleep(3000);
+
+    }
+
+    static void StartingMenu()
+    //Tomas Bendaravicius
+    {
+        Clock();
+        Console.WriteLine("\n\n\tMoneyBag insurance Group LTD\n");
+    }
+
     static void Clock() // Current time
+    //Tomas Bendaravicius
     {
         DateTime currentDateTime = DateTime.Now;
         string formattedDateTime = currentDateTime.ToString("dddd, dd MMMM yyyy HH:mm:ss");
-        Console.WriteLine("Current date and time: " + formattedDateTime);
+        Console.WriteLine("\nCurrent date and time: " + formattedDateTime);
     }
 
     static string GetUserName()
+    //Tomas Bendaravicius
     {
         Console.WriteLine("Enter your name:");
         return Console.ReadLine();
     }
 
     static string GetUserSurname()
+    //Tomas Bendaravicius
     {
         Console.WriteLine("Enter your surname:");
         return Console.ReadLine();
     }
 
     static void PrintPersonalizedMessage(string userName, string userSurname, double finalQuote)
+    //Tomas Bendaravicius
     {
         Console.WriteLine($"Dear {userName} {userSurname},");
         Console.WriteLine($"Your insurance quote is: {finalQuote} euros");
